@@ -1,0 +1,11 @@
+{
+  "name": "kevinscheuer_3_100321",
+  "version": "1.0.0",
+  "description": "Ohmyfood! - Projet 3 - Open Classrooms",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main_mobile.scss:./public/css/mobile.css"
+  },
+  "author": "Kévin Scheuer",
+  "license": "ISC"
+}
