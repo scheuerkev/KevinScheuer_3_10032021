@@ -7,5 +7,8 @@
     "sass": "sass --watch ./sass/main_mobile.scss:./public/css/mobile.css"
   },
   "author": "Kévin Scheuer",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
 }
