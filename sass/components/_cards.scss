@@ -1,0 +1,29 @@
+figure {
+
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  @include button_shadow(0.25);
+
+
+  img {
+    border-radius: 15px 15px 0 0;
+    height: calc(100% - 60px);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  figcaption {
+    height: 60px;
+    position: relative;
+    padding: 10px;
+  }
+
+  i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

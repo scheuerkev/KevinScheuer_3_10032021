@@ -1,0 +1,17 @@
+button {
+  display: block;
+  width: 220px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: bold;
+  margin: auto;
+  @include gradient(170deg);
+  @include button_shadow(0.75);
+
+    &:hover {
+      cursor: pointer;
+      @include button_shadow(0.9);
+    }
+}

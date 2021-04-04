@@ -1,0 +1,30 @@
+.step {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  left:-10px;
+  top: 25px;
+  color: #fff;
+  font-size: 1.3rem;
+  background-color: $color-primary;
+  position: absolute;
+}
+
+.new {
+  background-color: $color-tertiary;
+  color: $green-accent;
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

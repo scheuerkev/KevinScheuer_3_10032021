@@ -1,0 +1,66 @@
+header form {
+  text-align: center;
+  background-color: $grey-tertiary;
+  padding-bottom: 50px;
+
+  label {
+    display: block;
+    height: 55px;
+    margin: auto;
+    line-height: 55px;
+    background-color: $grey-primary;
+    color: $grey-secondary;
+    box-shadow: inset 0 1px 3px $grey-secondary;
+    input {
+      margin-left: 10px;
+        background: transparent;
+        border: none;
+
+        &:focus{
+          border: none;
+          outline: none;
+        }
+
+      }
+
+    }
+
+  h2 {
+    padding: 25px 35px 0 35px;
+  }
+
+  p {
+    padding: 20px 35px 20px 35px;
+  }
+}
+
+.order {
+
+  fieldset {
+  border: none;
+
+    legend {
+      text-transform: uppercase;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        margin-top: 5px;
+        background-color: $color-tertiary;
+      }
+    }
+
+    label {
+      display: block;
+      height: 70px;
+      width: 100%;
+      background-color: #fff;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
