@@ -1,0 +1,7 @@
+.results {
+  background-color: $grey-tertiary;
+  padding: 35px;
+  display: grid;
+  grid-template-rows: auto repeat(4, 200px);
+  grid-gap: 20px;
+}
