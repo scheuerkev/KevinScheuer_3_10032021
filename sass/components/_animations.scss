@@ -1,0 +1,61 @@
+$dark: rgba(0, 0, 0, 0.8);
+
+.load  {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  z-index: 99;
+  background-color: $dark;
+  backdrop-filter: blur(4px);
+  transform: translateX(0);
+  animation: hidden_loader 10ms ease-in-out 5.3s 1 forwards;
+
+  &__spinner {
+    height: 15rem;
+    width: 15rem;
+    margin: auto;
+    border-top: 8px double $color-primary;
+    border-right: 8px double transparent;
+    border-radius: 50%;
+    animation: spinner .8s linear 7;
+  }
+
+  i {
+    font-size: 7.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-secondary;
+    opacity: 0;
+    animation: reveal 5.6s ease-in-out 1;
+  }
+}
+
+
+
+@keyframes spinner {
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reveal {
+
+  100% {
+    color: $color-primary;
+    opacity: 1;
+  }
+}
+
+@keyframes hidden_loader {
+
+  100%{
+    transform: translateX(-9999px);
+  }
+
+}
+
+
