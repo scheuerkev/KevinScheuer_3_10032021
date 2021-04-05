@@ -1,4 +1,7 @@
-main {
+.restaurant-main {
   background-color: $grey-tertiary;
-  border-radius: 20px 20px 0 0;
+  border-radius: 40px 40px 0 0;
+  padding: 20px 20px 0px 20px;
+  position: relative;
+  top: -50px;
 }

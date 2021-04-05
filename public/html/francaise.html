@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="stylesheet" href="fontawesome/css/all.css" type="text/css"/>
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css" type="text/css"/>
     <link rel="stylesheet" href="../css/normalizer.css"/>
     <link rel="stylesheet" href="../css/mobile.css"/>
     <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 426px)"/>
@@ -13,99 +13,129 @@
 </head>
 <body>
 <header>
-    <a href="index.html"><i><-</i></a>
-    <img class="main-logo" src="../img/logo/ohmyfood.png"/>
+    <div class="header__navigation">
+        <a href="index.html" target="_self"><i class="fas fa-arrow-left"></i></a>
+        <h1 class="brand-name">ohmyfood</h1>
+    </div>
     <img class="restaurant-picture" src="../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"/>
 </header>
-<main>
-    <label class="menu"><h1 class="menu__title">À la française</h1>
-        <i class="menu__heart"></i>
-        <input type="checkbox"/>
+<main class="restaurant-main">
+    <label class="menu"><h2 class="menu__title">À la française</h2>
+        <i class="far fa-heart"></i>
     </label>
     <form class="order">
         <fieldset>
             <legend>Entrées</legend>
             <label>
-                <h2>Tartare de poulpe acidulé</h2>
+                <div class="plate">
+                <h3>Tartare de poulpe acidulé</h3>
                 <p>Aux zestes d'orange</p>
+                </div>
+                <div class="plate__price">
                 <p>25€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
             <label>
-                <h2>Velouté de légumes d'antan</h2>
+                <div class="plate">
+                <h3>Velouté de légumes d'antan</h3>
                 <p>Carotte, panais, topinambour</p>
+                </div>
+                <div class="plate__price">
                 <p>35€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
             <label>
-                <h2>Soupe à l'oignon</h2>
+                <div class="plate">
+                <h3>Soupe à l'oignon</h3>
                 <p>Revisitée</p>
+                </div>
+                <div class="plate__price">
                 <p>20€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
         </fieldset>
         <fieldset>
             <legend>Plats</legend>
             <label>
-                <h2>Coquilles Saint-Jacques</h2>
+                <div class="plate">
+                <h3>Coquilles Saint-Jacques</h3>
                 <p>Accompagnées d'une purée de panais</p>
+                </div>
+                <div class="plate__price">
                 <p>40€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
             <label>
-                <h2>Magret de canard</h2>
+                <div class="plate">
+                <h3>Magret de canard</h3>
                 <p>Et parmentier de pommes de terre</p>
+                </div>
+                <div class="plate__price">
                 <p>35€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
             <label>
-                <h2>Pigeonneau d’Ille-et-Vilaine</h2>
+                <div class="plate">
+                <h3>Pigeonneau d’Ille-et-Vilaine</h3>
                 <p>Sur son lit de gnocchis aux légumes</p>
+                </div>
+                <div class="plate__price">
                 <p>44€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
         </fieldset>
         <fieldset>
             <legend>Desserts</legend>
             <label>
-                <h2>Pétales de violettes glacés</h2>
+                <div class="plate">
+                <h3>Pétales de violettes glacés</h3>
                 <p>Et purée de noisettes</p>
+                </div>
+                <div class="plate__price">
                 <p>18€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
             <label>
-                <h2>Fondant au chocolat</h2>
+                <div class="plate">
+                <h3>Fondant au chocolat</h3>
                 <p>Revisité</p>
+                </div>
+                <div class="plate__price">
                 <p>22€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
             <label>
-                <h2>Millefeuille croustillant</h2>
+                <div class="plate">
+                <h3>Millefeuille croustillant</h3>
                 <p>Myrtilles et pâte d’amande</p>
+                </div>
+                <div class="plate__price">
                 <p>23€</p>
                 <input type="checkbox"/>
+                </div>
             </label>
         </fieldset>
         <button class="order__send">Commander</button>
     </form>
 </main>
 <footer>
-    <img class="footer__logo" src="../img/logo/ohmyfood.png" alt="Logo Oh my food!"
-         title="Oh my food!-Trouvez votre prochain restau préféré"/>
+    <h3><a href="index.html" target="_self">ohmyfood</a></h3>
     <nav class="footer-nav">
         <ul>
-            <a href="#">
-                <li class="footer-nav__submit"><i></i>Proposer un restaurant</li>
-            </a>
-            <a href="#">
-                <li class="footer-nav__partner"><i></i>Devenir partenaire</li>
-            </a>
-            <a href="#">
-                <li class="footer-nav__legal">Mentions légales</li>
-            </a>
-            <a href="#">
-                <li class="footer-nav__contact">Contact</li>
-            </a>
+            <li class="footer-nav__submit"><a href="#" target="_self"><i class="fas fa-utensils"></i>Proposer un
+                restaurant</a></li>
+            <li class="footer-nav__partner"><a href="#" target="_self"><i class="fas fa-hands-helping"></i>Devenir
+                partenaire</a></li>
+            <li class="footer-nav__legal"><a href="#" target="_self">Mentions légales</a></li>
+            <li class="footer-nav__contact"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
     </nav>
 </footer>

@@ -10,7 +10,7 @@ header form {
     line-height: 55px;
     background-color: $grey-primary;
     color: $grey-secondary;
-    box-shadow: inset 0 1px 3px $grey-secondary;
+    box-shadow: inset 0 4px 4px -5px $grey-secondary;
     input {
       margin-left: 10px;
         background: transparent;
@@ -41,6 +41,7 @@ header form {
 
     legend {
       text-transform: uppercase;
+      padding-top: 20px;
 
       &::after {
         content: "";
@@ -52,15 +53,36 @@ header form {
       }
     }
 
-    label {
-      display: block;
-      height: 70px;
-      width: 100%;
-      background-color: #fff;
-    }
-
     input {
       display: none;
     }
   }
+}
+
+.order label {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 15px;
+    height: 65px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 10px;
+    @include button_shadow(0.25);
+    opacity: (1);
+
+}
+
+
+.plate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.order__send {
+  margin-top: 40px;
 }

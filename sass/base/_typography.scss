@@ -12,12 +12,38 @@ h1 {
   font-size: 3rem;
 }
 
+.brand-name {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fff;
+}
+
 h2 {
   font-size: 2.2rem;
 }
 
+.menu__title {
+  font-family: 'Shrikhand', cursive ;
+  font-size: 2.6rem;
+
+  i {
+    font-size: 2.6rem;
+  }
+}
+
 h3 {
   font-size: 2rem;
+}
+
+.plate {
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
 }
 
 h4 {

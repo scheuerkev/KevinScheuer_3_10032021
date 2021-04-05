@@ -1,16 +1,20 @@
-.brand-name {
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-}
-
 .notice {
   background-color: #fff;
-  padding: 35px;
-  height: 400px;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto repeat(3, 70px) 20px;
+  grid-gap: 20px;
+
+  ul {
+    display: contents;
+  }
 
   li {
     @include notice-button();
+    transition: background-color 200ms ease-in;
+    width: inherit;
+    margin-left: 10px;
+    margin-bottom: 0;
 
     i {
       font-size: 1.4rem;
@@ -19,10 +23,9 @@
       top: 50%;
       transform: translateY(-50%);
       color: $grey-accent;
-
     }
-
-    &:last-child {
+    &:hover {
+      background-color: $grey-primary;
       i {
         color: $color-primary;
 
