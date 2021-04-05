@@ -12,6 +12,6 @@ button {
 
     &:hover {
       cursor: pointer;
-      @include button_shadow(0.9);
+      @include button_shadow(1);
     }
 }
