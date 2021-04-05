@@ -3,7 +3,7 @@ $dark: rgba(0, 0, 0, 0.8);
 .load  {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   display: flex;
   z-index: 99;
   background-color: $dark;
@@ -33,7 +33,33 @@ $dark: rgba(0, 0, 0, 0.8);
   }
 }
 
+.hidden-heart {
 
+  @include gradient(170deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0), translateX(-10px);
+
+  &:hover {
+    animation: hidden_heart 300ms ease-in-out both;
+  }
+}
+
+.results__card--description i {
+
+}
+
+
+.label__element {
+  animation: label-show $anim-dur backwards;
+  @for $i from 1 through $label-nb {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+    }
+  }
+}
+
+/*KEYFRAMES*/
 
 @keyframes spinner {
 
@@ -58,4 +84,24 @@ $dark: rgba(0, 0, 0, 0.8);
 
 }
 
+@keyframes hidden_heart {
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes label-show {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+
+}
 

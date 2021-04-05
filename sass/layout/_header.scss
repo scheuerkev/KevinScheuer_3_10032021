@@ -25,10 +25,10 @@
       color: $grey-accent;
     }
     &:hover {
-      background-color: $grey-primary;
+      background-color: #f5edfe;
+      @include button_shadow(0.45);
       i {
         color: $color-primary;
-
       }
     }
   }
