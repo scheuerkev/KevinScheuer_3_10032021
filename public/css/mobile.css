@@ -133,16 +133,18 @@ header form p {
 
 .order label {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 10px 15px;
+  /*padding: 10px 15px;*/
   height: 65px;
-  width: 100%;
+  /*width: 100%;*/
   background-color: #fff;
   border-radius: 10px 10px 10px 10px;
   margin-top: 10px;
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.25);
   opacity: 1;
+  overflow: hidden;
 }
 
 .plate {
@@ -150,10 +152,25 @@ header form p {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 80%;
 }
 
 .order__send {
   margin-top: 40px;
+}
+
+.checked {
+  background-color: #99e2d0;
+  color: #fff;
+  width: 65px;
+  transform-origin: right;
+  transform: translateX(90%);
+  height: 65px;
+  border-radius: 0 10px 10px 0;
+  display: none;
+}
+.checked i {
+  transform: rotate(0deg);
 }
 
 .step {
@@ -268,6 +285,18 @@ figure i {
 .label__element--4 {
   animation-delay: 750ms;
 }
+.label__element:hover {
+  cursor: pointer;
+}
+.label__element:hover .checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: appear 700ms ease forwards;
+}
+.label__element:hover .checked i {
+  animation: appear_swing 600ms ease 70ms forwards;
+}
 
 /*KEYFRAMES*/
 @keyframes spinner {
@@ -301,6 +330,19 @@ figure i {
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateX(90%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes appear_swing {
+  100% {
+    transform: rotate(360deg);
   }
 }
 body {

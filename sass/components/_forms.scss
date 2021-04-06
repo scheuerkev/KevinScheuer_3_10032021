@@ -59,19 +59,19 @@ header form {
 }
 
 .order label {
-
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 10px 15px;
+    /*padding: 10px 15px;*/
     height: 65px;
-    width: 100%;
+    /*width: 100%;*/
     background-color: #fff;
     border-radius: 10px 10px 10px 10px;
     margin-top: 10px;
     @include button_shadow(0.25);
     opacity: (1);
-
+    overflow: hidden;
 }
 
 
@@ -80,8 +80,26 @@ header form {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 80%;
+
+
 }
 
 .order__send {
   margin-top: 40px;
+}
+
+.checked {
+  background-color: $color-tertiary;
+  color: #fff;
+  width: 65px;
+  transform-origin: right;
+  transform: translateX(90%);
+  height: 65px;
+  border-radius: 0 10px 10px 0;
+  display: none;
+
+  i {
+    transform: rotate(0deg);
+  }
 }

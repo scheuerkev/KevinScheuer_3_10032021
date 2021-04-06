@@ -57,7 +57,27 @@ $dark: rgba(0, 0, 0, 0.8);
       animation-delay: $anim-delay * $i;
     }
   }
+
+  &:hover {
+    cursor: pointer;
+
+    .checked {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      animation: appear 700ms ease forwards;
+    }
+
+    .checked i {
+      animation: appear_swing 600ms ease 70ms forwards;
+    }
+
+  }
 }
+
+
+
 
 /*KEYFRAMES*/
 
@@ -101,5 +121,22 @@ $dark: rgba(0, 0, 0, 0.8);
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  0%{
+    transform: translateX(90%);
+  }
+
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear_swing {
+  100% {
+    transform: rotate(360deg);
   }
 }
