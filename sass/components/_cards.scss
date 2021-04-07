@@ -19,11 +19,10 @@ figure {
     position: relative;
     padding: 10px;
   }
+}
 
-  i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+.results__card--description{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

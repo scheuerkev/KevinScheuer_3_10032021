@@ -21,10 +21,40 @@
   position: absolute;
   right: 10px;
   top: 10px;
+  transform: scale(1);
 }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.like {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.heart {
+  color: $grey-accent;
+  background-color: transparent;
+  position: relative;
+  left: 0;
+  z-index: 2;
+}
+
+.hidden-heart {
+  @include gradient(170deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.95rem;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.heartcheck {
+
 }
