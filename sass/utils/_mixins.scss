@@ -2,8 +2,8 @@
   background: linear-gradient($angle, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 65%);
 }
 
-@mixin button_shadow($opacity) {
-  box-shadow: 0 10px 10px -10px rgba(0,0,0,$opacity);
+@mixin button_shadow($offset_spread, $opacity) {
+  box-shadow: 0 10px $offset_spread -10px rgba(0,0,0,$opacity);
 }
 
 @mixin notice-button {
@@ -15,5 +15,5 @@
   border-radius: 20px;
   margin-bottom: 20px;
   position: relative;
-  @include button_shadow(0.35);
+  @include button_shadow(10px, 0.35);
 }

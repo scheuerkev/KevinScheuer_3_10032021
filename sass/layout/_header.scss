@@ -19,10 +19,11 @@
 
   li {
     @include notice-button();
-    transition: background-color 200ms ease-in;
+    transition: all 240ms ease-out;
     width: inherit;
     margin-left: 10px;
     margin-bottom: 0;
+
 
     @media (min-width: 768px) {
       @for $i from 1 through 3 {
@@ -51,8 +52,9 @@
       }
 
     &:hover {
+      cursor: help;
       background-color: #f5edfe;
-      @include button_shadow(0.45);
+      @include button_shadow(12px, 0.45);
       i {
         color: $color-primary;
       }
@@ -69,9 +71,14 @@
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
+    transition: color 200ms ease-in-out ;
 
     @media (min-width: 425px) {
       left: 15px;
+    }
+
+    &:hover {
+      color: $color-primary;
     }
   }
 }

@@ -1,7 +1,8 @@
-/*COLORS SCHEME*/
+/*COLOR SCHEME*/
 /*ANIMATIONS VARIABLES*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 :root {
   font-size: 10px;
 }
@@ -116,6 +117,9 @@ a {
   }
 }
 
+footer a {
+  transition: color 200ms ease-in-out;
+}
 @media (min-width: 425px) {
   footer a {
     font-size: 1.5rem;
@@ -130,16 +134,20 @@ button {
   width: 220px;
   height: 50px;
   border: none;
+  font-size: 1.5rem;
   border-radius: 30px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   margin: auto;
   background: linear-gradient(170deg, #ff79da 0%, #9356dc 65%);
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.65);
+  transition: all 250ms ease-out 20ms;
 }
 button:hover {
   cursor: pointer;
-  box-shadow: 0 10px 10px -10px black;
+  box-shadow: 0 10px 13px -10px black;
+  background: linear-gradient(172deg, #ff79da 0%, #9356dc 65%);
+  opacity: 0.96;
 }
 
 header form {
@@ -207,9 +215,7 @@ header form p {
   position: relative;
   justify-content: space-between;
   align-items: flex-end;
-  /*padding: 10px 15px;*/
   height: 65px;
-  /*width: 100%;*/
   background-color: #fff;
   border-radius: 10px 10px 10px 10px;
   margin-top: 10px;
@@ -373,21 +379,6 @@ figure figcaption {
   animation: reveal_heart 300ms ease-in-out both;
 }
 
-.label__element {
-  animation: label-show 750ms backwards;
-}
-.label__element--1 {
-  animation-delay: 187.5ms;
-}
-.label__element--2 {
-  animation-delay: 375ms;
-}
-.label__element--3 {
-  animation-delay: 562.5ms;
-}
-.label__element--4 {
-  animation-delay: 750ms;
-}
 .label__element:hover {
   cursor: pointer;
 }
@@ -399,6 +390,38 @@ figure figcaption {
 }
 .label__element:hover .checked i {
   animation: appear-rotate 600ms ease 70ms forwards;
+}
+@media (max-width: 767px) {
+  .label__element {
+    animation: label-show 750ms backwards;
+  }
+  .label__element--1 {
+    animation-delay: 187.5ms;
+  }
+  .label__element--2 {
+    animation-delay: 375ms;
+  }
+  .label__element--3 {
+    animation-delay: 562.5ms;
+  }
+  .label__element--4 {
+    animation-delay: 750ms;
+  }
+}
+
+@media (min-width: 768px) {
+  .fieldset__element {
+    animation: fieldset-show 750ms backwards;
+  }
+  .fieldset__element--1 {
+    animation-delay: 187.5ms;
+  }
+  .fieldset__element--2 {
+    animation-delay: 375ms;
+  }
+  .fieldset__element--3 {
+    animation-delay: 562.5ms;
+  }
 }
 
 .results a:hover .new {
@@ -435,6 +458,18 @@ figure figcaption {
 @keyframes label-show {
   0% {
     transform: translateY(10px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fieldset-show {
+  0% {
+    transform: translateX(-10px);
     opacity: 0;
   }
   80% {
@@ -498,7 +533,7 @@ body {
   margin-bottom: 20px;
   position: relative;
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
-  transition: background-color 200ms ease-in;
+  transition: all 240ms ease-out;
   width: inherit;
   margin-left: 10px;
   margin-bottom: 0;
@@ -535,8 +570,9 @@ body {
   }
 }
 .notice li:hover {
+  cursor: help;
   background-color: #f5edfe;
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 12px -10px rgba(0, 0, 0, 0.45);
 }
 .notice li:hover i {
   color: #9356DC;
@@ -551,11 +587,15 @@ body {
   top: 50%;
   transform: translateY(-50%);
   left: 20px;
+  transition: color 200ms ease-in-out;
 }
 @media (min-width: 425px) {
   .header__navigation i {
     left: 15px;
   }
+}
+.header__navigation i:hover {
+  color: #9356DC;
 }
 
 header img {
@@ -614,7 +654,7 @@ footer {
 }
 @media (min-width: 425px) {
   footer {
-    padding: 15px;
+    padding: 15px 15px 40px 15px;
   }
 }
 footer h3 {

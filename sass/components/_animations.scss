@@ -11,6 +11,7 @@ $dark: rgba(0, 0, 0, 0.8);
   transform: translateX(0);
   animation: hidden_loader 10ms cubic-bezier(0,1.27,0,.91) 3s 1 forwards;
 
+
   &__spinner {
     height: 15rem;
     width: 15rem;
@@ -19,6 +20,7 @@ $dark: rgba(0, 0, 0, 0.8);
     border-right: 8px double transparent;
     border-radius: 50%;
     animation: spinner 750ms linear 4;
+
   }
 
   i {
@@ -30,6 +32,7 @@ $dark: rgba(0, 0, 0, 0.8);
     color: $color-secondary;
     opacity: 0;
     animation: reveal 3.1s ease-in-out 1;
+
   }
 }
 
@@ -50,13 +53,6 @@ cursor: pointer;
 
 
 .label__element {
-  animation: label-show $anim-dur backwards;
-  @for $i from 1 through $label-nb {
-    &--#{$i} {
-      animation-delay: $anim-delay * $i;
-    }
-  }
-
   &:hover {
     cursor: pointer;
 
@@ -73,93 +69,131 @@ cursor: pointer;
     }
 
   }
-}
 
-.results a{
+  @media (max-width: 767px) {
 
-  &:hover {
-    .new {
-      animation: new-shake 150ms cubic-bezier(0,.7,1,.35) 700ms 2 forwards;
+    animation: label-show $anim-dur backwards;
+    @for $i from 1 through $label-nb {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
     }
   }
 }
 
-/*KEYFRAMES*/
+.fieldset__element {
+  @media (min-width: 768px) {
 
-@keyframes spinner {
+    animation: fieldset-show $anim-dur backwards;
+    @for $i from 1 through $fieldset-nb {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
+    }
 
-  100%{
-    transform: rotate(360deg);
   }
 }
 
-@keyframes reveal {
+  .results a {
 
-  100% {
-    color: $color-primary;
-    opacity: 1;
-  }
-}
-
-@keyframes hidden_loader {
-
-  100%{
-    transform: translateX(-9999px);
+    &:hover {
+      .new {
+        animation: new-shake 150ms cubic-bezier(0, .7, 1, .35) 700ms 2 forwards;
+      }
+    }
   }
 
-}
+  /*KEYFRAMES*/
 
-@keyframes reveal_heart {
-  100%{
-    opacity: 1;
-  }
-}
+  @keyframes spinner {
 
-@keyframes hidden_heart {
-  100%{
-    opacity: 0;
-  }
-}
-
-@keyframes label-show {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+  @keyframes reveal {
 
-@keyframes appear {
-  0%{
-    transform: translateX(90%);
+    100% {
+      color: $color-primary;
+      opacity: 1;
+    }
   }
 
+  @keyframes hidden_loader {
 
-  100% {
-    transform: translateX(0);
-  }
-}
+    100% {
+      transform: translateX(-9999px);
+    }
 
-@keyframes appear-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes new-shake {
-  25% {
-    transform: translateX($intensity);
   }
 
-  75%{
-    transform: translateX($intensity * -1);
+  @keyframes reveal_heart {
+    100% {
+      opacity: 1;
+    }
   }
 
-}
+  @keyframes hidden_heart {
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes label-show {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fieldset-show {
+    0% {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      transform: translateX(90%);
+    }
+
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes appear-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes new-shake {
+    25% {
+      transform: translateX($intensity);
+    }
+
+    75% {
+      transform: translateX($intensity * -1);
+    }
+  }
+
+
 

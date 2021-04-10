@@ -4,7 +4,7 @@ figure {
   position: relative;
   background-color: #fff;
   border-radius: 15px;
-  @include button_shadow(0.25);
+  @include button_shadow(10px, 0.25);
 
 
   img {

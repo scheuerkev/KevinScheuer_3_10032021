@@ -3,15 +3,19 @@ button {
   width: 220px;
   height: 50px;
   border: none;
+  font-size: 1.5rem;
   border-radius: 30px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   margin: auto;
   @include gradient(170deg);
-  @include button_shadow(0.75);
+  @include button_shadow(10px, 0.65);
+  transition: all 250ms ease-out 20ms;
 
     &:hover {
       cursor: pointer;
-      @include button_shadow(1);
+      @include button_shadow(13px, 1);
+      @include gradient(172deg);
+      opacity: 0.96;
     }
 }
