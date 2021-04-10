@@ -4,4 +4,22 @@
   display: grid;
   grid-template-rows: auto repeat(4, 200px) 20px;
   grid-gap: 20px;
+
+  @media (min-width: 425px) {
+    grid-template-rows: auto repeat(2, 200px) 10px;
+    padding: 15px;
+    grid-gap: 15px;
+  }
+
+  @media (min-width: 600px) {
+    grid-template-rows: auto repeat(2, 240px) 10px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-rows: auto repeat(2, 300px) 10px;
+  }
+
+  @media (min-width: 1380px) {
+    grid-template-rows: auto repeat(2, 400px) 10px;
+  }
 }

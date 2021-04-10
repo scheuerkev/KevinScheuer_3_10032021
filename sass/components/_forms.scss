@@ -2,6 +2,9 @@ header form {
   text-align: center;
   background-color: $grey-tertiary;
   padding-bottom: 50px;
+  @media (min-width: 768px) {
+    padding-bottom: 30px;
+  }
 
   label {
     display: block;
@@ -34,6 +37,12 @@ header form {
 }
 
 .order {
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
 
   fieldset {
   border: none;
@@ -87,6 +96,11 @@ header form {
 
 .order__send {
   margin-top: 40px;
+  
+  @media (min-width: 768px) {
+    margin-top: 0;
+    grid-column: 2/3;
+  }
 }
 
 .checked {
