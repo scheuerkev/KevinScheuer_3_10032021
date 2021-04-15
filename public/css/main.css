@@ -2,7 +2,6 @@
 /*ANIMATIONS VARIABLES*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 :root {
   font-size: 10px;
 }
@@ -60,17 +59,21 @@ h3 {
   }
 }
 
-.plate h3 {
-  font-size: 1.7rem;
+.plate__name {
+  font-size: 1.7rem !important;
+  font-weight: bold;
 }
-.plate p {
+@media (min-width: 768px) {
+  .plate__name {
+    font-size: 1.5rem;
+  }
+}
+.plate span {
+  display: block;
   font-size: 1.4rem;
 }
 @media (min-width: 768px) {
-  .plate h3 {
-    font-size: 1.5rem;
-  }
-  .plate p {
+  .plate span {
     font-size: 1.2rem;
   }
 }
@@ -208,13 +211,11 @@ header form p {
 }
 .order fieldset input {
   display: none;
+  appearance: none;
 }
 
-.order label {
+.starters, .dishes, .desserts {
   display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: flex-end;
   height: 65px;
   background-color: #fff;
   border-radius: 10px 10px 10px 10px;
@@ -228,8 +229,17 @@ header form p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  width: 80%;
+  width: 100%;
+  padding: 7px 10px;
+}
+.plate__name, .plate__description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.plate > label:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
 }
 
 .order__send {
@@ -243,14 +253,16 @@ header form p {
 }
 
 .checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #99e2d0;
   color: #fff;
-  width: 65px;
+  width: 0;
   transform-origin: right;
-  transform: translateX(90%);
+  transform: translateX(100%);
   height: 65px;
   border-radius: 0 10px 10px 0;
-  display: none;
 }
 .checked i {
   transform: rotate(0deg);
@@ -309,6 +321,7 @@ header form p {
   font-size: 1.95rem;
   opacity: 0;
   position: absolute;
+  left: 0;
   top: 0;
   z-index: 1;
 }
@@ -383,13 +396,13 @@ figure figcaption {
   cursor: pointer;
 }
 .label__element:hover .checked {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   animation: appear 700ms ease forwards;
 }
 .label__element:hover .checked i {
   animation: appear-rotate 600ms ease 70ms forwards;
+}
+.label__element:hover .plate {
+  animation: reduce_size 800ms ease 80ms forwards;
 }
 @media (max-width: 767px) {
   .label__element {
@@ -481,15 +494,21 @@ figure figcaption {
 }
 @keyframes appear {
   0% {
-    transform: translateX(90%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
+    width: 20%;
   }
 }
 @keyframes appear-rotate {
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes reduce_size {
+  100% {
+    width: 80%;
   }
 }
 @keyframes new-shake {

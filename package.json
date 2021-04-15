@@ -7,8 +7,5 @@
     "sass": "sass --watch ./sass/main.scss:./public/css/main.css"
   },
   "author": "Kévin Scheuer",
-  "license": "ISC",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
-  }
+  "license": "ISC"
 }

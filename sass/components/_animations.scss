@@ -57,15 +57,15 @@ cursor: pointer;
     cursor: pointer;
 
     .checked {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
       animation: appear 700ms ease forwards;
     }
 
     .checked i {
       animation: appear-rotate 600ms ease 70ms forwards;
+    }
+    
+    .plate {
+      animation: reduce_size 800ms ease 80ms forwards;
     }
 
   }
@@ -170,18 +170,25 @@ cursor: pointer;
 
   @keyframes appear {
     0% {
-      transform: translateX(90%);
+      transform: translateX(100%);
     }
 
 
     100% {
       transform: translateX(0);
+      width: 20%;
     }
   }
 
   @keyframes appear-rotate {
     100% {
       transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes reduce_size {
+    100% {
+      width: 80%;
     }
   }
 

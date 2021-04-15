@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-<!--    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css" type="text/css"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css" integrity="sha512-3icgkoIO5qm2D4bGSUkPqeQ96LS8+ukJC7Eqhl1H5B2OJMEnFqLmNDxXVmtV/eq5M65tTDkUYS/Q0P4gvZv+yA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/normalizer.css"/>
     <link rel="stylesheet" href="../css/main.css"/>
     <title>Menu - Le délice des sens | Ohmyfood!</title>
@@ -15,114 +15,141 @@
         <a href="../../index.html" target="_self"><i class="fas fa-arrow-left"></i></a>
         <h1 class="brand-name">ohmyfood</h1>
     </div>
-    <img class="restaurant-picture" src="../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"/>
+    <img class="restaurant-picture" src="../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant Le Délice des Sens, Paris"/>
 </header>
 <main class="restaurant-main">
-    <label class="menu"><h2 class="menu__title">Le délice des sens</h2>
+    <div class="menu"><h2 class="menu__title">Le délice des sens</h2>
         <div class="like">
             <i class="heart far fa-heart"></i>
             <i class="hidden-heart fas fa-heart"></i>
         </div>
-    </label>
+    </div>
     <form class="order">
         <fieldset class="fieldset__element fieldset__element--1">
             <legend>Entrées</legend>
-            <label class="label__element label__element--1">
+            <div class="starters label__element label__element--1">
                 <div class="plate">
-                    <h3>Tartare de thon</h3>
-                    <p>Assaisonné au yuzu</p>
+                    <label for="starter--choice1"><span class="plate__name">Tartare de thon</span></label>
+                    <label for="starter--choice1">
+                        <span class="plate__description">Assaisonné au yuzu</span>
+                        <span>25€</span>
+                    </label>
                 </div>
-                <div class="plate__price">
-                    <p>25€</p>
+                <div class="checked">
+                    <input id="starter--choice1" name="starter--choice" type="radio" />
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
-            <label class="label__element label__element--2">
+            </div>
+            <div class="starters label__element label__element--2">
+            <div class="plate">
+                <label for="starter--choice2"><span class="plate__name">Bouchée de homard croustillant</span></label>
+                <label for="starter--choice2">
+                    <span class="plate__description">Et sa farandole de petits légumes</span>
+                    <span>35€</span>
+                </label>
+            </div>
+            <div class="checked">
+                <input id="starter--choice2" name="starter--choice" type="radio" />
+                <i class="fas fa-check-circle"></i>
+            </div>
+            </div>
+            <div class="starters label__element label__element--3">
                 <div class="plate">
-                    <h3>Bouchée de homard croustillant</h3>
-                    <p>Et sa farandole de petits légumes</p>
+                    <label for="starter--choice3"><span class="plate__name">Velouté de cèpes</span></label>
+                    <label for="starter--choice3">
+                        <span class="plate__description">Aux truffes</span>
+                        <span>20€</span>
+                    </label>
                 </div>
-                <div class="plate__price">
-                    <p>35€</p>
+                <div class="checked">
+                    <input id="starter--choice3" name="starter--choice" type="radio" />
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
-            <label class="label__element label__element--3">
-                <div class="plate">
-                    <h3>Velouté de cèpes</h3>
-                    <p>Aux truffes</p>
-                </div>
-                <div class="plate__price">
-                    <p>20€</p>
-                </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
+            </div>
         </fieldset>
         <fieldset class="fieldset__element fieldset__element--2">
             <legend>Plats</legend>
-            <label class="label__element label__element--1">
+            <div class="dishes label__element label__element--1">
                 <div class="plate">
-                    <h3>Poulet rôti aux herbes de Provence</h3>
-                    <p>Et sa crème de truffe</p>
+                    <label for="dishes--choice1"><span class="plate__name">Poulet rôti aux herbes de Provence</span></label>
+                    <label for="dishes--choice1">
+                        <span class="plate__description">Et sa crème de truffe</span>
+                        <span>40€</span>
+                    </label>
                 </div>
-                <div class="plate__price">
-                    <p>40€</p>
+                <div class="checked">
+                    <input id="dishes--choice1" name="dishes--choice" type="radio" />
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
-            <label class="label__element label__element--2">
+            </div>
+            <div class="dishes label__element label__element--2">
                 <div class="plate">
-                    <h3>Langouste rôtie</h3>
-                    <p>Et ses légumes de saison</p>
+                    <label for="dishes--choice2"><span class="plate__name">Langouste rôtie</span></label>
+                    <label for="dishes--choice2">
+                        <span class="plate__description">Et ses légumes de saison</span>
+                        <span>35€</span>
+                    </label>
                 </div>
-                <div class="plate__price">
-                    <p>35€</p>
+                <div class="checked">
+                    <input id="dishes--choice2" name="dishes--choice" type="radio" />
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
-            <label class="label__element label__element--3">
+            </div>
+            <div class="dishes label__element label__element--3">
                 <div class="plate">
-                    <h3>Côte de boeuf Angus</h3>
-                    <p>Et sa purée de panais</p>
+                    <label for="dishes--choice3"><span class="plate__name">Côte de boeuf Angus</span></label>
+                    <label for="dishes--choice3">
+                        <span class="plate__description">Et sa purée de panais</span>
+                        <span>44€</span>
+                    </label>
                 </div>
-                <div class="plate__price">
-                    <p>44€</p>
+                <div class="checked">
+                    <input id="dishes--choice3" name="dishes--choice" type="radio" />
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
+            </div>
         </fieldset>
         <fieldset class="fieldset__element fieldset__element--3">
             <legend>Desserts</legend>
-            <label class="label__element label__element--1">
+            <div class="desserts label__element label__element--1">
                 <div class="plate">
-                    <h3>Farandole de desserts</h3>
-                    <p>Du chef</p>
+                    <label for="desserts--choice1"><span class="plate__name">Farandole de desserts</span></label>
+                    <label for="desserts--choice1">
+                        <span class="plate__description">Du chef</span>
+                        <span>18€</span>
+                    </label>
                 </div>
-                <div class="plate__price">
-                    <p>18€</p>
+                <div class="checked">
+                    <input id="desserts--choice1" name="desserts--choice" type="radio" />
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
-            <label class="label__element label__element--2">
+            </div>
+            <div class="desserts label__element label__element--2">
                 <div class="plate">
-                    <h3>Crème brulée</h3>
-                    <p>Revisitée</p>
+                    <label for="desserts--choice2"><span class="plate__name">Crème brulée</span></label>
+                    <label for="desserts--choice2">
+                        <span class="plate__description">Revisitée</span>
+                        <span>22€</span>
+                    </label>
                 </div>
-                <div class="plate__price">
-                    <p>22€</p>
+                <div class="checked">
+                    <input id="desserts--choice2" name="desserts--choice" type="radio" />
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
-            <label class="label__element label__element--3">
+            </div>
+            <div class="desserts label__element label__element--3">
                 <div class="plate">
-                    <h3>Tiramisu</h3>
-                    <p>À la noisette</p>
+                    <label for="desserts--choice3"><span class="plate__name">Tiramisu</span></label>
+                    <label for="desserts--choice3">
+                        <span class="plate__description">À la noisette</span>
+                        <span>23€</span>
+                    </label>
                 </div>
-                <div class="plate__price">
-                    <p>23€</p>
+                <div class="checked">
+                    <input id="desserts--choice3" name="desserts--choice" type="radio" />
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="checked"><i class="fas fa-check-circle"></i></div>
-            </label>
+            </div>
         </fieldset>
         <button class="order__send">Commander</button>
     </form>

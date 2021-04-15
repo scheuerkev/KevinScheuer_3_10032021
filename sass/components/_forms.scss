@@ -62,30 +62,41 @@ header form {
     }
     input {
       display: none;
+      appearance: none;
     }
   }
 }
 
-.order label {
+.starters, .dishes, .desserts {
     display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: flex-end;
     height: 65px;
     background-color: #fff;
     border-radius: 10px 10px 10px 10px;
     margin-top: 10px;
     @include button_shadow(10px, 0.25);
-    opacity: (1);
+    opacity: 1;
     overflow: hidden;
+
+
 }
 
 .plate {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  width: 80%;
+  width: 100%;
+  padding: 7px 10px;
+
+  &__name, &__description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  & > label:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .order__send {
@@ -98,14 +109,16 @@ header form {
 }
 
 .checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $color-tertiary;
   color: #fff;
-  width: 65px;
+  width: 0;
   transform-origin: right;
-  transform: translateX(90%);
+  transform: translateX(100%);
   height: 65px;
   border-radius: 0 10px 10px 0;
-  display: none;
   i {
     transform: rotate(0deg);
   }
