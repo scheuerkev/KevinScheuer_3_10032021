@@ -4,8 +4,10 @@
   "description": "Ohmyfood! - Projet 3 - Open Classrooms",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/main.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/main.css --style compressed",
+    "prefix": "postcss public/css/main.css --use autoprefixer -d public/css/prefixed"
   },
   "author": "Kévin Scheuer",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }
