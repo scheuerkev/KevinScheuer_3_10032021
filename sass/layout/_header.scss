@@ -51,10 +51,19 @@
       }
       }
 
+    &:nth-child(3){
+      background-color: #f5edfe;
+      @include button_shadow(12px, 0.25);
+      i {
+        color: $color-primary;
+      }
+    }
+
     &:hover {
       cursor: help;
-      background-color: #f5edfe;
-      @include button_shadow(12px, 0.45);
+      background-color: lighten(#f5edfe,1%);
+      @include button_shadow(12px, 0.15);
+
       i {
         color: $color-primary;
       }

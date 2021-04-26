@@ -8,6 +8,8 @@ $grey-primary: #eaeaea;
 $grey-secondary: #353535;
 $grey-tertiary: #f6f6f6;
 $grey-accent: #7e7e7e;
+$dark: rgba(0, 0, 0, 0.8);
+
 
 /*ANIMATIONS VARIABLES*/
 
@@ -15,4 +17,4 @@ $anim-dur: 750ms;
 $label-nb: 4;
 $fieldset-nb: 3;
 $anim-delay: $anim-dur / $label-nb;
-$intensity: 4%
+$intensity: 4%;

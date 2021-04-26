@@ -4,7 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css" integrity="sha512-3icgkoIO5qm2D4bGSUkPqeQ96LS8+ukJC7Eqhl1H5B2OJMEnFqLmNDxXVmtV/eq5M65tTDkUYS/Q0P4gvZv+yA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+          integrity="sha512-3icgkoIO5qm2D4bGSUkPqeQ96LS8+ukJC7Eqhl1H5B2OJMEnFqLmNDxXVmtV/eq5M65tTDkUYS/Q0P4gvZv+yA=="
+          crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/normalizer.css"/>
     <link rel="stylesheet" href="../css/main.css"/>
     <title>Menu - À la française | Ohmyfood!</title>
@@ -15,7 +17,8 @@
         <a href="../../index.html" target="_self"><i class="fas fa-arrow-left"></i></a>
         <h1 class="brand-name">ohmyfood</h1>
     </div>
-    <img class="restaurant-picture" src="../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant À la Française, Paris"/>
+    <img class="restaurant-picture" src="../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+         alt="Restaurant À la Française, Paris"/>
 </header>
 <main class="restaurant-main">
     <div class="menu"><h2 class="menu__title">À la française</h2>
@@ -24,136 +27,116 @@
             <i class="hidden-heart fas fa-heart"></i>
         </div>
     </div>
-    <form class="order">
-        <fieldset class="fieldset__element fieldset__element--1">
-            <legend>Entrées</legend>
-            <div class="starters label__element label__element--1">
-                <div class="plate">
-                    <label for="starter--choice1"><span class="plate__name">Tartare de poulpe acidulé</span></label>
-                    <label for="starter--choice1">
-                        <span>Aux zestes d'orange</span>
-                        <span>25€</span>
-                    </label>
-                </div>
-                <div class="checked">
-                    <input id="starter--choice1" name="starter--choice" type="radio" />
-                    <i class="fas fa-check-circle"></i>
-                </div>
-            </div>
-            <div class="starters label__element label__element--2">
-                <div class="plate">
-                    <label for="starter--choice2"><span class="plate__name">Velouté de légumes d'antan</span></label>
-                    <label for="starter--choice2">
-                        <span>Carotte, panais, topinambour</span>
-                        <span>35€</span>
-                    </label>
-                </div>
-                <div class="checked">
-                    <input id="starter--choice2" name="starter--choice" type="radio" />
-                    <i class="fas fa-check-circle"></i>
-                </div>
-            </div>
-            <div class="starters label__element label__element--3">
-                <div class="plate">
-                    <label for="starter--choice3"><span class="plate__name">Soupe à l'oignon</span></label>
-                    <label for="starter--choice3">
-                        <span>Revisitée</span>
-                        <span>20€</span>
-                    </label>
-                </div>
-                <div class="checked">
-                    <input id="starter--choice3" name="starter--choice" type="radio" />
-                    <i class="fas fa-check-circle"></i>
-                </div>
-            </div>
-        </fieldset>
 
-        <fieldset class="fieldset__element fieldset__element--2">
-            <legend>Plats</legend>
-            <div class="dishes label__element label__element--1">
-                <div class="plate">
-                    <label for="dishes--choice1"><span class="plate__name">Coquilles Saint-Jacques</span></label>
-                    <label for="dishes--choice1">
-                        <span>Accompagnées d'une purée de panais</span>
-                        <span>40€</span>
-                    </label>
+<div class="order">
+    <section class="element__group order__item order__item--1">
+        <h3 class="element__group-name">Entrées</h3>
+        <ul class="element_list element__list--1">
+            <li class="element__item element__item--1">
+                <div class="element__descr">
+                    <p class="descr__title">Tartare de poulpe acidulé</p>
+                    <p class="descr__subtitle">Aux zestes d'orange</p>
                 </div>
+                <p class="element__price">25€</p>
                 <div class="checked">
-                    <input id="dishes--choice1" name="dishes--choice" type="radio" />
                     <i class="fas fa-check-circle"></i>
                 </div>
-            </div>
-            <div class="dishes label__element label__element--2">
-                <div class="plate">
-                    <label for="dishes--choice2"><span class="plate__name">Magret de canard</span></label>
-                    <label for="dishes--choice2">
-                        <span>Et parmentier de pommes de terre</span>
-                        <span>35€</span>
-                    </label>
+            </li>
+            <li class="element__item element__item--2">
+                <div class="element__descr">
+                    <p class="descr__title">Velouté de légumes d'antan</p>
+                    <p class="descr__subtitle">Carotte, panais, topinambour</p>
                 </div>
+                <p class="element__price">35€</p>
                 <div class="checked">
-                    <input id="dishes--choice2" name="dishes--choice" type="radio" />
                     <i class="fas fa-check-circle"></i>
                 </div>
-            </div>
-            <div class="dishes label__element label__element--3">
-                <div class="plate">
-                    <label for="dishes--choice3"><span class="plate__name">Pigeonneau d’Ille-et-Vilaine</span></label>
-                    <label for="dishes--choice3">
-                        <span>Sur son lit de gnocchis aux légumes</span>
-                        <span>44€</span>
-                    </label>
+            </li>
+            <li class="element__item element__item--3">
+                <div class="element__descr">
+                    <p class="descr__title">Soupe à l'oignon</p>
+                    <p class="descr__subtitle">Revisitée</p>
                 </div>
+                <p class="element__price">20€</p>
                 <div class="checked">
-                    <input id="dishes--choice3" name="dishes--choice" type="radio" />
                     <i class="fas fa-check-circle"></i>
                 </div>
-            </div>
-        </fieldset>
-        <fieldset class="fieldset__element fieldset__element--3">
-            <legend>Desserts</legend>
-            <div class="desserts label__element label__element--1">
-                <div class="plate">
-                    <label for="desserts--choice1"><span class="plate__name">Pétales de violettes glacés</span></label>
-                    <label for="desserts--choice1">
-                        <span>Et purée de noisettes</span>
-                        <span>18€</span>
-                    </label>
+            </li>
+        </ul>
+    </section>
+    <section class="element__group order__item order__item--2">
+        <h3 class="element__group-name">Plats</h3>
+        <ul class="element_list element__list--2">
+            <li class="element__item element__item--1">
+                <div class="element__descr">
+                    <p class="descr__title">Coquilles Saint-Jacques</p>
+                    <p class="descr__subtitle">Accompagnées d'une purée de panais</p>
                 </div>
+                <p class="element__price">40€</p>
                 <div class="checked">
-                    <input id="desserts--choice1" name="desserts--choice" type="radio" />
                     <i class="fas fa-check-circle"></i>
                 </div>
-            </div>
-            <div class="desserts label__element label__element--2">
-                <div class="plate">
-                    <label for="desserts--choice2"><span class="plate__name">Fondant au chocolat</span></label>
-                    <label for="desserts--choice2">
-                        <span>Revisité</span>
-                        <span>22€</span>
-                    </label>
+            </li>
+            <li class="element__item element__item--2">
+                <div class="element__descr">
+                    <p class="descr__title">Magret de canard</p>
+                    <p class="descr__subtitle">Et parmentier de pommes de terre</p>
                 </div>
+                <p class="element__price">35€</p>
                 <div class="checked">
-                    <input id="desserts--choice2" name="desserts--choice" type="radio" />
                     <i class="fas fa-check-circle"></i>
                 </div>
-            </div>
-            <div class="desserts label__element label__element--3">
-                <div class="plate">
-                    <label for="desserts--choice3"><span class="plate__name">Millefeuille croustillant</span></label>
-                    <label for="desserts--choice3">
-                        <span>Myrtilles et pâte d’amande</span>
-                        <span>23€</span>
-                    </label>
+            </li>
+            <li class="element__item element__item--3">
+                <div class="element__descr">
+                    <p class="descr__title">Pigeonneau d’Ille-et-Vilaine</p>
+                    <p class="descr__subtitle">Sur son lit de gnocchis aux légumes</p>
                 </div>
+                <p class="element__price">44€</p>
                 <div class="checked">
-                    <input id="desserts--choice3" name="desserts--choice" type="radio" />
                     <i class="fas fa-check-circle"></i>
                 </div>
-            </div>
-        </fieldset>
+            </li>
+        </ul>
+    </section>
+    <section class="element__group order__item order__item--3">
+        <h3 class="element__group-name">Desserts</h3>
+        <ul class="element_list element__list--3">
+            <li class="element__item element__item--1">
+                <div class="element__descr">
+                    <p class="descr__title">Pétales de violettes glacés</p>
+                    <p class="descr__subtitle">Et purée de noisettes</p>
+                </div>
+                <p class="element__price">18€</p>
+                <div class="checked">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </li>
+            <li class="element__item element__item--2">
+                <div class="element__descr">
+                    <p class="descr__title">Fondant au chocolat</p>
+                    <p class="descr__subtitle">Revisité</p>
+                </div>
+                <p class="element__price">22€</p>
+                <div class="checked">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </li>
+            <li class="element__item element__item--3">
+                <div class="element__descr">
+                    <p class="descr__title">Millefeuille croustillant</p>
+                    <p class="descr__subtitle">Myrtilles et pâte d’amande</p>
+                </div>
+                <p class="element__price">23€</p>
+                <div class="checked">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </li>
+        </ul>
+    </section>
+
         <button class="order__send">Commander</button>
-    </form>
+</div>
 </main>
 <footer>
     <h3><a href="index.html" target="_self">ohmyfood</a></h3>

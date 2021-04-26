@@ -1,9 +1,9 @@
 footer {
   color: #fff;
   background-color: $grey-secondary;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   @media (min-width: 425px) {
-    padding: 15px 15px 40px 15px;
+    padding: 15px
   }
 
   h3 {
@@ -31,9 +31,11 @@ footer {
 
 @media (min-width: 580px) {
 
-  ul {
+ footer ul {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 
 }

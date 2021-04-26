@@ -16,6 +16,6 @@ button {
       cursor: pointer;
       @include button_shadow(13px, 1);
       @include gradient(172deg);
-      opacity: 0.96;
+      opacity: 0.90;
     }
 }

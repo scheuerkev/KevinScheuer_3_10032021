@@ -1,5 +1,3 @@
-$dark: rgba(0, 0, 0, 0.8);
-
 .load  {
   width: 100vw;
   height: 100vh;
@@ -41,38 +39,23 @@ $dark: rgba(0, 0, 0, 0.8);
 cursor: pointer;
 
   & > .heart {
-    animation: hidden_heart 300ms ease-in-out both;
+    opacity: 0;
   }
 
 
   & > .hidden-heart {
-      animation: reveal_heart 300ms ease-in-out both;
+      opacity: 1;
     }
 
 }
 
 
-.label__element {
-  &:hover {
-    cursor: pointer;
+.element__item {
 
-    .checked {
-      animation: appear 700ms ease forwards;
-    }
-
-    .checked i {
-      animation: appear-rotate 600ms ease 70ms forwards;
-    }
-    
-    .plate {
-      animation: reduce_size 800ms ease 80ms forwards;
-    }
-
-  }
-
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
 
     animation: label-show $anim-dur backwards;
+
     @for $i from 1 through $label-nb {
       &--#{$i} {
         animation-delay: $anim-delay * $i;
@@ -81,19 +64,18 @@ cursor: pointer;
   }
 }
 
-.fieldset__element {
-  @media (min-width: 768px) {
+.order__item {
+  @media (min-width: 1024px) {
 
     animation: fieldset-show $anim-dur backwards;
+
     @for $i from 1 through $fieldset-nb {
       &--#{$i} {
         animation-delay: $anim-delay * $i;
       }
     }
-
   }
 }
-
   .results a {
 
     &:hover {
@@ -168,29 +150,6 @@ cursor: pointer;
     }
   }
 
-  @keyframes appear {
-    0% {
-      transform: translateX(100%);
-    }
-
-
-    100% {
-      transform: translateX(0);
-      width: 20%;
-    }
-  }
-
-  @keyframes appear-rotate {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes reduce_size {
-    100% {
-      width: 80%;
-    }
-  }
 
   @keyframes new-shake {
     25% {

@@ -2,15 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 :root {
-  font-size: 10px;
+  font-size: 9px;
 
-  @media (min-width: 425px) {
+  @media (min-width: 375px) {
+    font-size: 10px;
+  }
+
+    @media (min-width: 425px) {
     font-size: 11px;
   }
 
-  @media (min-width: 768px) {
-    font-size: 12px;
-  }
 }
 
 h1 {
@@ -61,28 +62,19 @@ h3 {
   }
 }
 
-.plate {
-  &__name {
-    font-size: 1.7rem !important;
-    font-weight: bold;
-    @media (min-width: 768px) {
-        font-size: 1.5rem;
-      }
-  }
-
-  span {
-    display: block;
-    font-size: 1.4rem;
-    @media (min-width: 768px) {
-        font-size: 1.2rem;
-      }
-  }
-
+.element__group h3 {
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
-.plate__price {
-  @media (min-width: 768px) {
-    font-size: 1.35rem;
+.element__item {
+  p:first-of-type {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  p:last-of-type {
+    font-size: 1.5rem;
   }
 }
 
